@@ -1,0 +1,12 @@
+@mixin list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font-set($size, $line-height, $weight:null, $color:$dark-grey) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+}

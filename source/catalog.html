@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сервис для поиска попутчиков в путешествие Погнали!">
+  <title>HTML Academy: Погнали. Каталог</title>
+</head>
+<body>
+<header class="page-header">
+  <nav class="page-header__nav">
+    <a class="" href="index.html">
+      <img class="page-header__logo" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип Погнали">
+    </a>
+    <button class="page-header__menu-button"></button>
+    <div class="page-header__menu-wrapper">
+      <ul class="page-header__menu">
+        <li class="page-header__menu-item"><a href="index.html" class="page-header__menu-link">О сервисе</a></li>
+        <li class="page-header__menu-item"><a href="form.html" class="page-header__menu-link">Направления</a></li>
+        <li class="page-header__menu-item"><a class="page-header__menu-link">Попутчики</a></li>
+      </ul>
+      <a href="authorization.html" class="page-header__authorization-link">Авторизация</a>
+      <a href="tel:+788005558628" class="page-header__phone">8 800 555-86-28</a>
+      <a href="mailto:mail@htmlacademy.ru" class="page-header__email">mail@htmlacademy.ru</a>
+      <ul class="page-header__socials">
+        <li class="page-header__socials-item">
+          <a href="" class="page-header__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
+        <li class="page-header__socials-item">
+          <a href="" class="page-header__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
+        <li class="page-header__socials-item">
+          <a href="" class="page-header__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="page-header__intro">
+    <h1 class="page-header__intro-title">Попутчики</h1>
+  </section>
+</header>
+
+<main>
+  <section class="country-search">
+    <h2 class="country-search__title">Фильтрация по странам</h2>
+    <button class="country-search__button" type="button">X</button>
+    <ul class="country-search__regions-list">
+      <li class="country-search__region"><a href="">Европа</a></li>
+      <li class="country-search__region"><a href="">Азия</a></li>
+      <li class="country-search__region"><a href="">Америка</a></li>
+      <li class="country-search__region"><a href="">Острова</a></li>
+    </ul>
+    <ul class="country-search__alphabet">
+      <li class="country-search__letter">
+        <button type="button">А</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Б</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">В</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Г</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Д</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Е</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">З</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">И</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">К</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Л</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">М</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Н</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">О</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">П</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Р</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">С</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Т</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">У</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Ф</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Х</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Ч</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Ш</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Э</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Ю</button>
+      </li>
+      <li class="country-search__letter">
+        <button type="button">Я</button>
+      </li>
+    </ul>
+    <ul class="country-search__list">
+      <li class="country-search__country"><a href="">Афганистан</a></li>
+      <li class="country-search__country"><a href="">Албания</a></li>
+      <li class="country-search__country"><a href="">Алжир</a></li>
+      <li class="country-search__country"><a href="">Андорра</a></li>
+      <li class="country-search__country"><a href="">Аргентина</a></li>
+      <li class="country-search__country"><a href="">Армения</a></li>
+      <li class="country-search__country"><a href="">Австралия</a></li>
+      <li class="country-search__country"><a href="">Австрия</a></li>
+      <li class="country-search__country"><a href="">Азербайджан</a></li>
+    </ul>
+    <button type="button" class="country-search__button">Свернуть</button>
+  </section>
+
+  <section class="co-traveller-search">
+    <h2 class="co-traveller-search__title">Подберите идеального попутчика</h2>
+    <form class="co-traveller-search__form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="co-traveller-search__fieldset">
+        <legend class="co-traveller-search__legend">Хобби</legend>
+      </fieldset>
+      <fieldset class="co-traveller-search__fieldset">
+        <legend class="co-traveller-search__legend">Музыка</legend>
+        <label for="rock"></label>
+        <input id="rock" type="checkbox" name="rock" checked>Тяжелый рок
+        <label for="rap"></label>
+        <input id="rap" type="checkbox" name="rap">Русский рэп
+        <label for="dance"></label>
+        <input id="dance" type="checkbox" name="dance">Евроденс
+      </fieldset>
+      <fieldset class="co-traveller-search__fieldset">
+        <legend class="co-traveller-search__legend">Еда</legend>
+      </fieldset>
+      <fieldset class="co-traveller-search__fieldset">
+        <legend class="co-traveller-search__legend">Транспорт</legend>
+      </fieldset>
+      <fieldset class="co-traveller-search__fieldset">
+        <legend class="co-traveller-search__legend">Левел</legend>
+      </fieldset>
+      <button class="co-traveller-search__button" type="submit">Показать</button>
+    </form>
+  </section>
+
+  <section class="catalog">
+    <ul class="catalog__list">
+      <li class="catalog__item co-traveller">
+        <img class="co-traveller__photo" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70" height="70">
+        <p class="co-traveller__name">Таня Фирсова</p>
+        <p class="co-traveller__likes">1,5 M</p>
+        <p class="co-traveller__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+        <div class="co-traveller__wishes">хочет посетить:
+          <ul class="co-traveller__wish-list">
+            <li class="co-traveller__wish-item">Шри-Ланка</li>
+            <li class="co-traveller__wish-item">Таиланд</li>
+            <li class="co-traveller__wish-item">Сейшелы</li>
+          </ul>
+        </div>
+        <div class="co-traveller__transport">транспорт:
+          <ul class="co-traveller__transport-list">
+            <li class="co-traveller__transport-item">Самолет</li>
+            <li class="co-traveller__transport-item">Поезд</li>
+            <li class="co-traveller__transport-item">Велосипед</li>
+            <li class="co-traveller__transport-item">Пешком</li>
+          </ul>
+        </div>
+        <div class="co-traveller__level">левел:
+          <p>99</p></div>
+        <a href="" class="co-traveller__call-link">Позвать!</a>
+      </li>
+      <li class="catalog__item catalog__item--inner co-traveller">
+        <img class="co-traveller__photo" src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="70" height="70">
+        <p class="co-traveller__name">Петя Демин</p>
+        <p class="co-traveller__likes">150</p>
+        <p class="co-traveller__tags">#бургер #бар #футбол #концерт #крафт</p>
+        <div class="co-traveller__wishes">хочет посетить:
+          <ul class="co-traveller__wish-list">
+            <li class="co-traveller__wish-item">Бельгия</li>
+            <li class="co-traveller__wish-item">Чехия</li>
+          </ul>
+        </div>
+        <div class="co-traveller__transport">транспорт:
+          <ul class="co-traveller__transport-list">
+            <li class="co-traveller__transport-item">Самолет</li>
+            <li class="co-traveller__transport-item">Поезд</li>
+            <li class="co-traveller__transport-item">Велосипед</li>
+            <li class="co-traveller__transport-item">Пешком</li>
+          </ul>
+        </div>
+        <div class="co-traveller__level">левел:
+          <p>80</p></div>
+        <a href="" class="co-traveller__call-link">Позвать!</a>
+      </li>
+      <li class="catalog__item catalog__item--inner co-traveller">
+        <img class="co-traveller__photo" src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" width="70" height="70">
+        <p class="co-traveller__name">Марк Смолов</p>
+        <p class="co-traveller__likes">1700</p>
+        <p class="co-traveller__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+        <div class="co-traveller__wishes">хочет посетить:
+          <ul class="co-traveller__wish-list">
+            <li class="co-traveller__wish-item">США</li>
+            <li class="co-traveller__wish-item">Австралия</li>
+            <li class="co-traveller__wish-item">Доминикана</li>
+          </ul>
+        </div>
+        <div class="co-traveller__transport">транспорт:
+          <ul class="co-traveller__transport-list">
+            <li class="co-traveller__transport-item">Самолет</li>
+            <li class="co-traveller__transport-item">Поезд</li>
+            <li class="co-traveller__transport-item">Велосипед</li>
+            <li class="co-traveller__transport-item">Пешком</li>
+          </ul>
+        </div>
+        <div class="co-traveller__level">левел:
+          <p>25</p></div>
+        <a href="" class="co-traveller__call-link">Позвать!</a>
+      </li>
+      <li class="co-traveller__item">
+        <img class="co-traveller__photo" src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" width="70" height="70">
+        <p class="co-traveller__name">Лариса Роговая</p>
+        <p class="co-traveller__likes">23</p>
+        <p class="co-traveller__tags">#образование #карьера #учеба #линкедин
+        </p>
+        <div class="co-traveller__wishes">хочет посетить:
+          <ul class="co-traveller__wish-list">
+            <li class="co-traveller__wish-item">Великобритания</li>
+            <li class="co-traveller__wish-item">Германия</li>
+          </ul>
+        </div>
+        <div class="co-traveller__transport">транспорт:
+          <ul class="co-traveller__transport-list">
+            <li class="co-traveller__transport-item">Самолет</li>
+            <li class="co-traveller__transport-item">Поезд</li>
+            <li class="co-traveller__transport-item">Велосипед</li>
+            <li class="co-traveller__transport-item">Пешком</li>
+          </ul>
+        </div>
+        <div class="co-traveller__level">левел:
+          <p>50</p>
+        </div>
+        <a href="" class="co-traveller__call-link">Позвать!</a>
+      </li>
+    </ul>
+    <a href="" class="catalog__link">Показать еще</a>
+    <div class="catalog__pagination">
+      <button class="catalog__button catalog__button--prev" type="button" aria-label="Назад">Назад</button>
+      <button class="catalog__button catalog__button--next" type="button" aria-label="Вперед">Вперед</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img class="footer__logo" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали">
+  <ul class="footer__socials">
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
+  </ul>
+  <p class="footer__copyright">Разработано</p>
+  <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link" aria-label="Переход на сайт HTML-academy">
+    <img class="footer__copyright-logo" src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTML-academy">
+  </a>
+</footer>
+
+</body>
+</html>

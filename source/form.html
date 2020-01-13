@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сервис для поиска попутчиков в путешествие Погнали!">
+  <title>HTML Academy: Погнали. Направления</title>
+</head>
+<body>
+
+<header class="page-header">
+  <nav class="page-header__nav">
+    <a class="" href="index.html">
+    <img class="page-header__logo" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип Погнали">
+  </a>
+    <button class="page-header__menu-button"></button>
+    <div class="page-header__menu-wrapper">
+    <ul class="page-header__menu">
+      <li class="page-header__menu-item"><a href="index.html" class="page-header__menu-link">О сервисе</a></li>
+      <li class="page-header__menu-item"><a class="page-header__menu-link">Направления</a></li>
+      <li class="page-header__menu-item"><a href="catalog.html" class="page-header__menu-link">Попутчики</a></li>
+    </ul>
+    <a href="authorization.html" class="page-header__authorization-link">Авторизация</a>
+    <a href="tel:+788005558628" class="page-header__phone">8 800 555-86-28</a>
+    <a href="mailto:mail@htmlacademy.ru" class="page-header__email">mail@htmlacademy.ru</a>
+    <ul class="page-header__socials">
+      <li class="page-header__socials-item">
+        <a href="" class="page-header__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
+      <li class="page-header__socials-item">
+        <a href="" class="page-header__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
+      <li class="page-header__socials-item">
+        <a href="" class="page-header__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
+    </ul>
+    </div>
+  </nav>
+  <section class="page-header__intro">
+    <h1 class="page-header__intro-title">Направления</h1>
+  </section>
+</header>
+
+<main>
+  <section class="user-info">
+    <div class="user-info__level">80 level</div>
+    <img class="user-info__photo" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото пользователя">
+    <button class="user-info__button" type="button">Сменить фото</button>
+    <label for="tags"></label>
+    <textarea id="tags" class="user-info__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+    <div class="user-info__transport">транспорт:
+      <ul class="user-info__transport-list">
+        <li class="user-info__transport-item">
+          <button type="button" class="user-info__button">Самолет</button>
+        </li>
+        <li class="user-info__transport-item">
+          <button type="button" class="user-info__button">Поезд</button>
+        </li>
+        <li class="user-info__transport-item">
+          <button type="button" class="user-info__button">Велосипед</button>
+        </li>
+        <li class="user-info__transport-item">
+          <button type="button" class="user-info__button">Пешком</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="plans">
+    <h2 class="plans__title">Мои планы:</h2>
+    <ul class="plans__list">
+      <li class="plans__item">
+        <p>1. Франция, Италия</p>
+        <p>3 попутчика</p>
+        <p>26 мар — 29 мар</p>
+        <button class="plans__button">Изменить</button>
+      </li>
+      <li class="plans__item">
+        <p>2. Таиланд, Индонезия</p>
+        <p>1 попутчик</p>
+        <p>1 июл — 15 июл</p>
+        <button class="plans__button">Изменить</button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="add-plan">
+    <h2 class="add-plan__title">Добавить план:</h2>
+    <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="add-plan__fieldset" id="general-info">
+        <legend class="add-plan__title">Шаг 1. Даты пребывания</legend>
+        <p class="add-plan__text">
+          Укажите предпочтительное количество попутчиков, которых
+          вы хотели бы позвать в поездку и ее предполагаемую длительность.
+        </p>
+        <label for="quantity">Ищу попутчиков: </label>
+        <input id="quantity" type="number" name="quantity" step="1" min="1" value="2">
+        <label for="duration">Длительность: </label>
+        <input id="duration" type="number" name="duration" step="1" min="1" value="2">
+        <label for="kids"></label>
+        <input type="checkbox" id="kids" name="kids" checked>Можно с детьми
+        <a class="add-plan__link-next" href="#countries">Следующий шаг</a>
+      </fieldset>
+
+      <fieldset class="add-plan__fieldset" id="countries">
+        <legend class="add-plan__title">Шаг 2. Маршрут</legend>
+        <p class="add-plan__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу
+          несколько.</p>
+        <label for="country1"></label>
+        <input type="text" id="country1" value="Босния и Герцеговина" name="country1">
+        <label for="country2"></label>
+        <input type="text" id="country2" value="Чехия" name="country2">
+        <label for="country3"></label>
+        <input type="text" id="country3" placeholder="Выберите страну" name="country3">
+        <label for="country4"></label>
+        <input type="text" id="country4" placeholder="Добавить страну" name="country4">
+        <a class="add-plan__link-next" href="#entertainments">Следующий шаг</a>
+        <a class="add-plan__link-before" href="#general-info">На шаг назад</a>
+      </fieldset>
+
+      <fieldset class="add-plan__fieldset" id="entertainments">
+        <legend class="add-plan__title">Шаг 3. Развлечения</legend>
+        <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения.
+          Можно писать в свободной форме и ставить тэги.
+        </p>
+        <label for="entertainment1">Босния и Герцеговина</label>
+        <textarea id="entertainment1" placeholder="План действий" name="entertainment1"></textarea>
+        <label for="entertainment2">Чехия</label>
+        <textarea id="entertainment2" name="entertainment2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+        <button type="submit" class="add-plan__button">Отправить</button>
+        <a class="add-plan__link-before" href="#countries">На шаг назад</a>
+      </fieldset>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <img class="footer__logo" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали">
+  <ul class="footer__socials">
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
+    <li class="footer__socials-item">
+      <a href="" class="footer__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
+  </ul>
+  <p class="footer__copyright">Разработано</p>
+  <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link" aria-label="Переход на сайт HTML-academy">
+    <img class="footer__copyright-logo" src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTML-academy">
+  </a>
+</footer>
+
+</body>
+</html>
