@@ -1,0 +1,38 @@
+.destinations {
+  background-color: $dark-blue;
+}
+
+.destinations__container {
+  @include wrapper;
+  @include border-radius;
+  background-color: $light-blue;
+}
+
+.destinations__title {
+  @include title($dark-orange);
+  margin: 0;
+}
+
+.destinations__text {
+  @include text($dark-grey);
+}
+
+.destinations__list {
+  @include list-style;
+}
+
+.destinations__item {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .destinations__text {
+    width: 40%;
+    margin-bottom: 110px;
+  }
+
+  .destinations__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}

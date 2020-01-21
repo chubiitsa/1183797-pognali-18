@@ -1,0 +1,82 @@
+.user-info {
+  @include wrapper;
+  background-color: $light-blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.user-info__level {
+  width: 100px;
+  height: 100px;
+  border: 3px solid $darkest-orange;
+  border-radius: 50%;
+  text-align: center;
+  color: $darkest-blue;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info__level-score {
+  @include font-set(38px, 38px, bold, $darkest-blue);
+  margin: 0;
+}
+
+.user-info__level-text {
+  @include font-set(18px, 22px, regular, $dark-grey);
+  margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 22px;
+    width: 49px;
+    height: 2px;
+    background-color: $dark-grey;
+    opacity: 0.3;
+  }
+}
+
+.user-info__photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-info__block {
+  width: 100%;
+  text-align: center;
+}
+
+.user-info__title {
+  @include font-set(16px, 18px, bold, $darkest-blue);
+  text-transform: uppercase;
+}
+
+.iser-info__transport-list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-info__tags {
+  @include font-set(16px, 22px, regular, $dark-grey);
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: $light-blue;
+  border: none;
+}
+
+.user-info__form {
+  width: 100%;
+  text-align: center;
+}
+
+.user-info__label {
+  background-color: $blue;
+}

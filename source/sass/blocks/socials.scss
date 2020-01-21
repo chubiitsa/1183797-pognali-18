@@ -1,0 +1,30 @@
+.socials {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials__icon {
+  &--header {
+    fill: $darkest-blue;
+    opacity: 0.3;
+  }
+
+  &--footer {
+    fill: $dark-blue;
+  }
+}
+
+.socials__link {
+  display: block;
+  text-align: center;
+  border-radius: 50%;
+  padding: 7px;
+  width: 30px;
+  height: 30px;
+
+  &--footer {
+    background-color: $yellow;
+  }
+}

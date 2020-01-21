@@ -4,9 +4,69 @@
   padding: 0;
 }
 
-@mixin font-set($size, $line-height, $weight:null, $color:$dark-grey) {
+@mixin font-set($size, $line-height, $weight:null, $color:$white) {
   font-size: $size;
   line-height: $line-height;
   font-weight: $weight;
   color: $color;
+}
+
+@mixin title($color) {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+@mixin subtitle {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: $darkest-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@mixin text($color) {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: $color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@mixin wrapper() {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  width: 100%;
+  max-width: $desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px;
+  }
+}
+
+@mixin border-radius {
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 50px 50px;
+  }
 }

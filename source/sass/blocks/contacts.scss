@@ -1,0 +1,109 @@
+.contacts {
+  background-color: $light-blue;
+}
+
+.contacts__container {
+  @include wrapper;
+  @include border-radius;
+  background-color: $dark-blue;
+  position: relative;
+}
+
+.contacts__title {
+  @include title($dark-orange);
+  text-align: center;
+}
+
+.contacts__text {
+  @include text($white);
+  text-align: center;
+}
+
+.contacts__wrapper {
+  @include wrapper;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $yellow;
+  border-radius: 0 0 20px 20px;
+  margin-top: -15px;
+}
+
+.contacts__authorization-link {
+  color: $yellow;
+  text-decoration: underline;
+}
+
+.contacts__phone,
+.contacts__email {
+  @include font-set(17px, 30px, bold, $yellow);
+  text-transform: uppercase;
+  display: block;
+  padding-left: 60px;
+  padding-top: 15px;
+}
+
+.contacts__address {
+  @include font-set(16px, 22px, bold, $darkest-blue);
+  text-transform: uppercase;
+}
+
+.contacts__route-link {
+  border: 2px solid $darkest-blue;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 546px;
+}
+
+.contacts__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__input {
+  width: 77%;
+  height: 60px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  padding: 25px;
+  flex-grow: 1;
+}
+
+.contacts__button {
+  width: 60px;
+  height: 60px;
+  background-color: $yellow;
+  border: none;
+  border-radius: 15px;
+  margin-left: -15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 40%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: none;
+    border-left: 10px solid $dark-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .contacts__map {
+    height: 700px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__map {
+    height: 750px;
+  }
+}

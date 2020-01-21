@@ -1,0 +1,32 @@
+.special-offer {
+  background-color: $light-blue;
+}
+
+.special-offer__container {
+  @include wrapper;
+  @include border-radius;
+  background-color: $dark-blue;
+}
+
+.special-offer__title {
+  @include title($dark-orange);
+}
+
+.special-offer__text {
+  @include text($white);
+}
+
+.special-offer__list {
+  @include list-style;
+}
+
+.special-offer__item {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .special-offer__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}

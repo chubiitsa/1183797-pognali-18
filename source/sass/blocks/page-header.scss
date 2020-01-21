@@ -1,0 +1,50 @@
+.page-header {
+  width: auto;
+  margin: 0;
+  background-color: $darkest-blue;
+
+  &--main-page {
+    padding-bottom: 80px;
+  }
+}
+
+.page-header__nav-wrapper {
+  @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  width: 100px;
+  height: 19px;
+}
+
+.page-header__menu-wrapper {
+  @include wrapper;
+  background-color: $white;
+  display: none;
+}
+
+.page-header__intro {
+  background-color: $darkest-blue;
+
+  &--inner {
+    background-color: $blue;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    width: 200px;
+    height: 52px;
+  }
+}

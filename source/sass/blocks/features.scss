@@ -1,0 +1,75 @@
+.features__container {
+  @include wrapper;
+  background-color: $dark-blue;
+}
+
+.features__list {
+  @include list-style;
+  margin-top: -100px;
+}
+
+.features__item {
+  @include font-set(18px, 18px, bold, $darkest-blue);
+  padding: 25px 90px 25px 20px;
+  border-radius: 10px 10px 0 0;
+  margin-top: -10px;
+  counter-increment: custom;
+  position: relative;
+
+  &:nth-child(4n+1) {
+    background-color: $darkest-orange;
+  }
+
+  &:nth-child(4n + 2) {
+    background-color: $dark-orange;
+  }
+
+  &:nth-child(4n + 3) {
+    background-color: $orange;
+  }
+
+  &:nth-child(4n + 4) {
+    background-color: $yellow;
+  }
+
+  &:last-child {
+    padding: 20px 90px 20px 20px;
+    border-radius: 10px;
+  }
+
+  &::before {
+    @include font-set(16px, 14px, regular, $white);
+    content: counter(custom);
+    right: 20px;
+    top: 20px;
+    position: absolute;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features__item {
+    width: 50%;
+
+    &--1 {
+      border-radius: 18px 0 0 0;
+    }
+
+    &--2 {
+      border-radius: 18px 18px 0 0;
+    }
+
+    &--3 {
+      border-radius: 0 0 0 18px;
+    }
+
+    &:last-child {
+      border-radius: 0 0 18px 18px;
+    }
+  }
+}

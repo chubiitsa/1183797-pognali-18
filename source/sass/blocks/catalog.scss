@@ -1,0 +1,84 @@
+.catalog__list {
+  @include list-style;
+}
+
+.catalog__container {
+  @include wrapper;
+}
+
+.catalog__item {
+  margin-bottom: 10px;
+}
+
+.catalog__pagination {
+  padding-bottom: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog__link {
+  background-color: transparent;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: $dark-blue;
+    position: absolute;
+    top: 19px;
+    left: 50px;
+  }
+
+  &::after {
+    content: "";
+    width: 2px;
+    height: 18px;
+    background-color: $dark-blue;
+    position: absolute;
+    top: 10px;
+    left: 58px;
+  }
+}
+
+.catalog__button {
+  width: 49.5%;
+  height: 42px;
+  border: none;
+  text-align: center;
+  padding: 6px;
+  background-color: $white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--prev {
+    border-radius: 25px 0 0 25px;
+
+    &::before {
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: none;
+      border-right: 10px solid $dark-blue;
+    }
+  }
+
+  &--next {
+    border-radius: 0 25px 25px 0;
+
+    &::before {
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: none;
+      border-left: 10px solid $dark-blue;
+    }
+  }
+}

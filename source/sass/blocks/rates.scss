@@ -1,0 +1,29 @@
+.rates {
+  background-color: $dark-blue;
+}
+
+.rates__container {
+  @include wrapper;
+  @include border-radius;
+  background-color: $light-blue;
+}
+
+.rates__title {
+  @include title($dark-orange);
+  width: 50%;
+  margin-left: 20px;
+}
+
+.rates__popup-open-button {
+  @include font-set(16px, 16px, bold, $darkest-blue);
+  display: block;
+  padding: 20px 0;
+  margin: 10px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .rates__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}

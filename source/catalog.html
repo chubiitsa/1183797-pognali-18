@@ -5,289 +5,527 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Сервис для поиска попутчиков в путешествие Погнали!">
   <title>HTML Academy: Погнали. Каталог</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+      document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 <header class="page-header">
   <nav class="page-header__nav">
-    <a class="" href="index.html">
-      <img class="page-header__logo" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип Погнали">
-    </a>
-    <button class="page-header__menu-button"></button>
+    <div class="page-header__nav-wrapper">
+      <a class="page-header__link" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+          <source type="img/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+          <img class="page-header__logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+        </picture>
+      </a>
+      <button type="button" class="page-header__menu-button main-menu__toggle" aria-label="Меню">
+        <span class="main-menu__toggle-icon"></span>
+      </button>
+    </div>
     <div class="page-header__menu-wrapper">
-      <ul class="page-header__menu">
-        <li class="page-header__menu-item"><a href="index.html" class="page-header__menu-link">О сервисе</a></li>
-        <li class="page-header__menu-item"><a href="form.html" class="page-header__menu-link">Направления</a></li>
-        <li class="page-header__menu-item"><a class="page-header__menu-link">Попутчики</a></li>
+      <ul class="page-header__menu main-menu">
+        <li class="main-menu__item"><a href="index.html" class="main-menu__link">О сервисе</a></li>
+        <li class="main-menu__item"><a href="form.html" class="main-menu__link">Направления</a></li>
+        <li class="main-menu__item"><a class="main-menu__link">Попутчики</a></li>
       </ul>
-      <a href="authorization.html" class="page-header__authorization-link">Авторизация</a>
-      <a href="tel:+788005558628" class="page-header__phone">8 800 555-86-28</a>
-      <a href="mailto:mail@htmlacademy.ru" class="page-header__email">mail@htmlacademy.ru</a>
-      <ul class="page-header__socials">
-        <li class="page-header__socials-item">
-          <a href="" class="page-header__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
-        <li class="page-header__socials-item">
-          <a href="" class="page-header__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
-        <li class="page-header__socials-item">
-          <a href="" class="page-header__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
-      </ul>
+      <div class="page-header__submenu submenu">
+        <a href="authorization.html" class="submenu__link submenu__link--authorization">Авторизация</a>
+        <a href="tel:+788005558628" class="submenu__link submenu__link--phone">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="submenu__link submenu__link--mail">mail@htmlacademy.ru</a>
+        <ul class="submenu__socials socials">
+          <li class="socials__item">
+            <a href="" class="socials__link" aria-label="Погнали на Фейсбуке">
+              <svg class="socials__icon socials__icon--header" width="16" height="16">
+                <use xlink:href="img/sprite.svg#s-icon-facebook"></use>
+              </svg>
+            </a></li>
+          <li class="socials__item">
+            <a href="" class="socials__link" aria-label="Погнали во Вконтакте">
+              <svg class="socials__icon socials__icon--header" width="16" height="16">
+                <use xlink:href="img/sprite.svg#s-icon-vk"></use>
+              </svg>
+            </a></li>
+          <li class="socials__item">
+            <a href="" class="socials__link" aria-label="Погнали в Инстаграме">
+              <svg class="socials__icon socials__icon--header" width="16" height="16">
+                <use xlink:href="img/sprite.svg#s-icon-instagram"></use>
+              </svg>
+            </a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <section class="page-header__intro">
-    <h1 class="page-header__intro-title">Попутчики</h1>
-  </section>
+  <div class="page-header__intro page-header__intro--inner intro">
+    <div class="intro__container intro__container--inner">
+      <h1 class="intro__title intro__title--inner">Попутчики</h1>
+      <a href="index.html" class="intro__link intro__link--inner">На главную</a>
+    </div>
+  </div>
 </header>
 
 <main>
-  <section class="country-search">
-    <h2 class="country-search__title">Фильтрация по странам</h2>
-    <button class="country-search__button" type="button">X</button>
-    <ul class="country-search__regions-list">
-      <li class="country-search__region"><a href="">Европа</a></li>
-      <li class="country-search__region"><a href="">Азия</a></li>
-      <li class="country-search__region"><a href="">Америка</a></li>
-      <li class="country-search__region"><a href="">Острова</a></li>
-    </ul>
-    <ul class="country-search__alphabet">
-      <li class="country-search__letter">
-        <button type="button">А</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Б</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">В</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Г</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Д</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Е</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">З</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">И</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">К</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Л</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">М</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Н</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">О</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">П</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Р</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">С</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Т</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">У</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Ф</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Х</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Ч</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Ш</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Э</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Ю</button>
-      </li>
-      <li class="country-search__letter">
-        <button type="button">Я</button>
-      </li>
-    </ul>
-    <ul class="country-search__list">
-      <li class="country-search__country"><a href="">Афганистан</a></li>
-      <li class="country-search__country"><a href="">Албания</a></li>
-      <li class="country-search__country"><a href="">Алжир</a></li>
-      <li class="country-search__country"><a href="">Андорра</a></li>
-      <li class="country-search__country"><a href="">Аргентина</a></li>
-      <li class="country-search__country"><a href="">Армения</a></li>
-      <li class="country-search__country"><a href="">Австралия</a></li>
-      <li class="country-search__country"><a href="">Австрия</a></li>
-      <li class="country-search__country"><a href="">Азербайджан</a></li>
-    </ul>
-    <button type="button" class="country-search__button">Свернуть</button>
-  </section>
-
-  <section class="co-traveller-search">
-    <h2 class="co-traveller-search__title">Подберите идеального попутчика</h2>
-    <form class="co-traveller-search__form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="co-traveller-search__fieldset">
-        <legend class="co-traveller-search__legend">Хобби</legend>
-      </fieldset>
-      <fieldset class="co-traveller-search__fieldset">
-        <legend class="co-traveller-search__legend">Музыка</legend>
-        <label for="rock"></label>
-        <input id="rock" type="checkbox" name="rock" checked>Тяжелый рок
-        <label for="rap"></label>
-        <input id="rap" type="checkbox" name="rap">Русский рэп
-        <label for="dance"></label>
-        <input id="dance" type="checkbox" name="dance">Евроденс
-      </fieldset>
-      <fieldset class="co-traveller-search__fieldset">
-        <legend class="co-traveller-search__legend">Еда</legend>
-      </fieldset>
-      <fieldset class="co-traveller-search__fieldset">
-        <legend class="co-traveller-search__legend">Транспорт</legend>
-      </fieldset>
-      <fieldset class="co-traveller-search__fieldset">
-        <legend class="co-traveller-search__legend">Левел</legend>
-      </fieldset>
-      <button class="co-traveller-search__button" type="submit">Показать</button>
-    </form>
-  </section>
-
-  <section class="catalog">
-    <ul class="catalog__list">
-      <li class="catalog__item co-traveller">
-        <img class="co-traveller__photo" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70" height="70">
-        <p class="co-traveller__name">Таня Фирсова</p>
-        <p class="co-traveller__likes">1,5 M</p>
-        <p class="co-traveller__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-        <div class="co-traveller__wishes">хочет посетить:
-          <ul class="co-traveller__wish-list">
-            <li class="co-traveller__wish-item">Шри-Ланка</li>
-            <li class="co-traveller__wish-item">Таиланд</li>
-            <li class="co-traveller__wish-item">Сейшелы</li>
-          </ul>
-        </div>
-        <div class="co-traveller__transport">транспорт:
-          <ul class="co-traveller__transport-list">
-            <li class="co-traveller__transport-item">Самолет</li>
-            <li class="co-traveller__transport-item">Поезд</li>
-            <li class="co-traveller__transport-item">Велосипед</li>
-            <li class="co-traveller__transport-item">Пешком</li>
-          </ul>
-        </div>
-        <div class="co-traveller__level">левел:
-          <p>99</p></div>
-        <a href="" class="co-traveller__call-link">Позвать!</a>
-      </li>
-      <li class="catalog__item catalog__item--inner co-traveller">
-        <img class="co-traveller__photo" src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="70" height="70">
-        <p class="co-traveller__name">Петя Демин</p>
-        <p class="co-traveller__likes">150</p>
-        <p class="co-traveller__tags">#бургер #бар #футбол #концерт #крафт</p>
-        <div class="co-traveller__wishes">хочет посетить:
-          <ul class="co-traveller__wish-list">
-            <li class="co-traveller__wish-item">Бельгия</li>
-            <li class="co-traveller__wish-item">Чехия</li>
-          </ul>
-        </div>
-        <div class="co-traveller__transport">транспорт:
-          <ul class="co-traveller__transport-list">
-            <li class="co-traveller__transport-item">Самолет</li>
-            <li class="co-traveller__transport-item">Поезд</li>
-            <li class="co-traveller__transport-item">Велосипед</li>
-            <li class="co-traveller__transport-item">Пешком</li>
-          </ul>
-        </div>
-        <div class="co-traveller__level">левел:
-          <p>80</p></div>
-        <a href="" class="co-traveller__call-link">Позвать!</a>
-      </li>
-      <li class="catalog__item catalog__item--inner co-traveller">
-        <img class="co-traveller__photo" src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" width="70" height="70">
-        <p class="co-traveller__name">Марк Смолов</p>
-        <p class="co-traveller__likes">1700</p>
-        <p class="co-traveller__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-        <div class="co-traveller__wishes">хочет посетить:
-          <ul class="co-traveller__wish-list">
-            <li class="co-traveller__wish-item">США</li>
-            <li class="co-traveller__wish-item">Австралия</li>
-            <li class="co-traveller__wish-item">Доминикана</li>
-          </ul>
-        </div>
-        <div class="co-traveller__transport">транспорт:
-          <ul class="co-traveller__transport-list">
-            <li class="co-traveller__transport-item">Самолет</li>
-            <li class="co-traveller__transport-item">Поезд</li>
-            <li class="co-traveller__transport-item">Велосипед</li>
-            <li class="co-traveller__transport-item">Пешком</li>
-          </ul>
-        </div>
-        <div class="co-traveller__level">левел:
-          <p>25</p></div>
-        <a href="" class="co-traveller__call-link">Позвать!</a>
-      </li>
-      <li class="co-traveller__item">
-        <img class="co-traveller__photo" src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" width="70" height="70">
-        <p class="co-traveller__name">Лариса Роговая</p>
-        <p class="co-traveller__likes">23</p>
-        <p class="co-traveller__tags">#образование #карьера #учеба #линкедин
-        </p>
-        <div class="co-traveller__wishes">хочет посетить:
-          <ul class="co-traveller__wish-list">
-            <li class="co-traveller__wish-item">Великобритания</li>
-            <li class="co-traveller__wish-item">Германия</li>
-          </ul>
-        </div>
-        <div class="co-traveller__transport">транспорт:
-          <ul class="co-traveller__transport-list">
-            <li class="co-traveller__transport-item">Самолет</li>
-            <li class="co-traveller__transport-item">Поезд</li>
-            <li class="co-traveller__transport-item">Велосипед</li>
-            <li class="co-traveller__transport-item">Пешком</li>
-          </ul>
-        </div>
-        <div class="co-traveller__level">левел:
-          <p>50</p>
-        </div>
-        <a href="" class="co-traveller__call-link">Позвать!</a>
-      </li>
-    </ul>
-    <a href="" class="catalog__link">Показать еще</a>
-    <div class="catalog__pagination">
-      <button class="catalog__button catalog__button--prev" type="button" aria-label="Назад">Назад</button>
-      <button class="catalog__button catalog__button--next" type="button" aria-label="Вперед">Вперед</button>
+  <section class="catalog-filter">
+    <div class="catalog-filter__header">
+      <h2 class="catalog-filter__title">Фильтрация по странам</h2>
+      <button class="catalog-filter__toggle" type="button"></button>
+    </div>
+    <div class="catalog-filter__container">
+      <ul class="catalog-filter__regions-list">
+        <li class="catalog-filter__region">
+          <a class="catalog-filter__region-link catalog-filter__region-link--active" href="">Европа</a></li>
+        <li class="catalog-filter__region"><a class="catalog-filter__region-link" href="">Азия</a></li>
+        <li class="catalog-filter__region"><a class="catalog-filter__region-link" href="">Америка</a></li>
+        <li class="catalog-filter__region"><a class="catalog-filter__region-link" href="">Острова</a></li>
+      </ul>
+      <div class="catalog-filter__search country-search">
+        <ul class="country-search__alphabet">
+          <li class="country-search__letter">
+            <button class="country-search__button country-search__button--active" type="button">А</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Б</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">В</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Г</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Д</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Е</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">З</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">И</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">К</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Л</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">М</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Н</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">О</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">П</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Р</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">С</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Т</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">У</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Ф</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Х</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Ч</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Ш</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Э</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Ю</button>
+          </li>
+          <li class="country-search__letter">
+            <button class="country-search__button" type="button">Я</button>
+          </li>
+        </ul>
+        <ul class="country-search__list">
+          <li class="country-search__country"><a class="country-search__link" href="">Афганистан</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Албания</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Алжир</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Андорра</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Аргентина</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Армения</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Австралия</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Австрия</a></li>
+          <li class="country-search__country"><a class="country-search__link" href="">Азербайджан</a></li>
+        </ul>
+      </div>
+      <button type="button" class="catalog-filter__button big-button">Свернуть</button>
     </div>
   </section>
+
+  <div class="co-traveller-search">
+    <div class="co-traveller-search__container">
+      <div class="co-traveller-search__wrapper">
+        <h2 class="co-traveller-search__title">Подберите идеального попутчика</h2>
+        <form class="co-traveller-search__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="co-traveller-search__fieldset">
+            <legend class="co-traveller-search__legend">Хобби</legend>
+            <input type="checkbox" id="gym" name="gym" checked>
+            <label class="co-traveller-search__label" for="gym">Спортзал</label>
+            <input type="checkbox" id="smoke" name="smoke">
+            <label class="co-traveller-search__label" for="smoke">Кальян</label>
+            <input type="checkbox" id="sofa" name="sofa">
+            <label class="co-traveller-search__label" for="sofa">Диван</label>
+          </fieldset>
+          <fieldset class="co-traveller-search__fieldset">
+            <legend class="co-traveller-search__legend">Музыка</legend>
+            <input id="rock" type="checkbox" name="rock" checked>
+            <label class="co-traveller-search__label" for="rock">Тяжелый рок</label>
+            <input id="rap" type="checkbox" name="rap">
+            <label class="co-traveller-search__label" for="rap">Русский рэп</label>
+            <input id="dance" type="checkbox" name="dance">
+            <label class="co-traveller-search__label" for="dance">Евроденс</label>
+          </fieldset>
+          <fieldset class="co-traveller-search__fieldset">
+            <legend class="co-traveller-search__legend">Еда</legend>
+            <input id="meat" type="checkbox" name="meat" checked>
+            <label class="co-traveller-search__label" for="meat">Мясоед</label>
+            <input id="health" type="checkbox" name="health">
+            <label class="co-traveller-search__label" for="health">Сидит на ПП</label>
+            <input id="vegan" type="checkbox" name="began">
+            <label class="co-traveller-search__label" for="vegan">Веган-сыроед</label>
+          </fieldset>
+          <fieldset class="co-traveller-search__fieldset">
+            <legend class="co-traveller-search__legend">Транспорт</legend>
+            <label for="plane" aria-label="Самолет"></label>
+            <input id="plane" type="checkbox" name="plane" checked>
+            <label for="bus" aria-label="Автобус"></label>
+            <input id="bus" type="checkbox" name="bus" checked>
+            <label for="bicycle" aria-label="Велосипед"></label>
+            <input id="bicycle" type="checkbox" name="bicycle">
+            <label for="run" aria-label="Пеший туризм"></label>
+            <input id="run" type="checkbox" name="run" checked>
+          </fieldset>
+          <fieldset class="co-traveller-search__fieldset">
+            <legend class="co-traveller-search__legend">Левел</legend>
+          </fieldset>
+          <button class="co-traveller-search__button big-button" type="submit">Показать</button>
+        </form>
+      </div>
+    </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog__container">
+        <ul class="catalog__list">
+          <li class="catalog__item co-traveller">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+              <img class="co-traveller__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" width="70" height="70">
+            </picture>
+            <div class="co-traveller__info">
+            <p class="co-traveller__name co-traveller__name--offline">
+                <span class="co-traveller__status co-traveller__status--offline"></span>Таня Фирсова</p>
+              <p class="co-traveller__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <div class="co-traveller__block">хочет посетить:
+                <ul class="co-traveller__wish-list">
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-sri-lanka.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Шри-Ланка</span>
+                  </li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-thailand.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Таиланд</span></li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-seychelles.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Сейшелы</span></li>
+                </ul>
+              </div>
+              <div class="co-traveller__details">
+                <div class="co-traveller__block">транспорт:
+                  <ul class="co-traveller__transport-list">
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-plane"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bus"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bike"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-run"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="co-traveller__block co-traveller__block--level">левел:
+                  <p class="co-traveller__level-score">99</p>
+                </div>
+              </div>
+              <div class="co-traveller__actions">
+                <a href="" class="co-traveller__call-link big-button">Позвать!</a>
+                <p class="co-traveller__likes">1,5 M</p>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item co-traveller">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <img class="co-traveller__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин" width="70" height="70">
+            </picture>
+            <div class="co-traveller__info">
+              <p class="co-traveller__name"><span class="co-traveller__status co-traveller__status--online"></span>Петя
+                Демин</p>
+              <p class="co-traveller__tags">#бургер #бар #футбол #концерт #крафт</p>
+              <div class="co-traveller__block">хочет посетить:
+                <ul class="co-traveller__wish-list">
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-belgium.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Бельгия</span>
+                  </li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-czech.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Чехия</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="co-traveller__details">
+                <div class="co-traveller__block">транспорт:
+                  <ul class="co-traveller__transport-list">
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-plane"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bus"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bike"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-run"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="co-traveller__block co-traveller__block--level">левел:
+                  <p class="co-traveller__level-score">80</p>
+                </div>
+              </div>
+              <div class="co-traveller__actions">
+                <a href="" class="co-traveller__call-link big-button">Позвать!</a>
+                <p class="co-traveller__likes">150</p>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item co-traveller">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+              <img class="co-traveller__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов" width="70" height="70">
+            </picture>
+            <div class="co-traveller__info">
+              <p class="co-traveller__name"><span class="co-traveller__status co-traveller__status--online"></span>Марк
+                Смолов</p>
+              <p class="co-traveller__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <div class="co-traveller__block">хочет посетить:
+                <ul class="co-traveller__wish-list">
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-usa.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">США</span></li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-australia.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Австралия</span></li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-dominica.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Доминикана</span></li>
+                </ul>
+              </div>
+              <div class="co-traveller__details">
+                <div class="co-traveller__block">транспорт:
+                  <ul class="co-traveller__transport-list">
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-plane"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bus"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bike"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-run"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="co-traveller__block co-traveller__block--level">левел:
+                  <p class="co-traveller__level-score">25</p>
+                </div>
+              </div>
+              <div class="co-traveller__actions">
+                <a href="" class="co-traveller__call-link big-button">Позвать!</a>
+                <p class="co-traveller__likes">1700</p>
+              </div>
+            </div>
+          </li>
+          <li class="catalog__item co-traveller">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+              <img class="co-traveller__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая" width="70" height="70">
+            </picture>
+            <div class="co-traveller__info">
+              <p class="co-traveller__name"><span class="co-traveller__status co-traveller__status--online"></span>Лариса
+                Роговая</p>
+              <p class="co-traveller__tags">#образование #карьера #учеба #линкедин</p>
+              <div class="co-traveller__block">хочет посетить:
+                <ul class="co-traveller__wish-list">
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-united-kingdom.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Великобритания</span></li>
+                  <li class="co-traveller__wish-item">
+                    <img src="img/flag-germany.svg" class="co-traveller__flag" width="26" height="18">
+                    <span class="co-traveller__country">Германия</span></li>
+                </ul>
+              </div>
+              <div class="co-traveller__details">
+                <div class="co-traveller__block">транспорт:
+                  <ul class="co-traveller__transport-list">
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-plane"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bus"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-bike"></use>
+                      </svg>
+                    </li>
+                    <li class="co-traveller__transport-item">
+                      <svg class="co-traveller__transport-icon co-traveller__transport-icon--inactive" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#s-icon-run"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="co-traveller__block co-traveller__block--level">левел:
+                  <p class="co-traveller__level-score">50</p>
+                </div>
+              </div>
+              <div class="co-traveller__actions">
+                <a href="" class="co-traveller__call-link big-button">Позвать!</a>
+                <p class="co-traveller__likes">23</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a href="" class="catalog__link big-button">Показать еще</a>
+        <div class="catalog__pagination">
+          <button class="catalog__button catalog__button--prev big-button" type="button" aria-label="Назад"></button>
+          <button class="catalog__button catalog__button--next big-button" type="button" aria-label="Вперед"></button>
+        </div>
+      </div>
+    </section>
 </main>
 
-<footer>
-  <img class="footer__logo" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали">
-  <ul class="footer__socials">
-    <li class="footer__socials-item">
-      <a href="" class="footer__socials-link" aria-label="Погнали на Фейсбуке">Логотип фэйсбука</a></li>
-    <li class="footer__socials-item">
-      <a href="" class="footer__socials-link" aria-label="Погнали во Вконтакте">Логотип Вконтакте</a></li>
-    <li class="footer__socials-item">
-      <a href="" class="footer__socials-link" aria-label="Погнали в Инстаграме">Логотип Инстаграма</a></li>
-  </ul>
-  <p class="footer__copyright">Разработано</p>
-  <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link" aria-label="Переход на сайт HTML-academy">
-    <img class="footer__copyright-logo" src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTML-academy">
-  </a>
+<footer class="footer footer--inner">
+  <div class="footer__container">
+    <a href="index.html" class="footer__link" aria-label="Переход на главную">
+      <picture>
+        <source media="(min-width:1440px)" type="image/webp" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+        <source media="(min-width:768px)" type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+        <source type="img/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+        <source media="(min-width:1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width:768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+        <img class="footer__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+      </picture>
+    </a>
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a href="" class="socials__link socials__link--footer" aria-label="Погнали на Фейсбуке">
+          <svg class="socials__icon socials__icon--footer" width="16" height="16">
+            <use xlink:href="img/sprite.svg#s-icon-facebook"></use>
+          </svg>
+        </a></li>
+      <li class="socials__item">
+        <a href="" class="socials__link socials__link--footer" aria-label="Погнали во Вконтакте">
+          <svg class="socials__icon socials__icon--footer" width="16" height="16">
+            <use xlink:href="img/sprite.svg#s-icon-vk"></use>
+          </svg>
+        </a></li>
+      <li class="socials__item">
+        <a href="" class="socials__link socials__link--footer" aria-label="Погнали в Инстаграме">
+          <svg class="socials__icon socials__icon--footer" width="16" height="16">
+            <use xlink:href="img/sprite.svg#s-icon-instagram"></use>
+          </svg>
+        </a></li>
+    </ul>
+    <div class="footer__copyright">
+      <span class="footer__copyright-text">Разработано</span>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link" aria-label="Переход на сайт HTML-academy">
+        <img class="footer__copyright-logo" src="img/htmlacademy.svg" width="16" height="16" alt="Логотип HTML-academy">
+      </a>
+    </div>
+  </div>
 </footer>
+
+<script src="js/script.min.js"></script>
 
 </body>
 </html>

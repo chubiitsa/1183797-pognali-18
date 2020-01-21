@@ -1,0 +1,31 @@
+.country-search__alphabet {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.country-search__letter {
+  border: 1px solid #cbced9;
+}
+
+.country-search__button {
+  @include font-set(14px, 18px, 500, $dark-blue);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: $white;
+
+  &--active {
+    background-color: $light-blue;
+  }
+}
+
+.country-search__list {
+  @include list-style;
+  margin-bottom: 30px;
+}
+
+.country-search__link {
+  @include font-set(16px, 22px, regular, $dark-grey);
+}

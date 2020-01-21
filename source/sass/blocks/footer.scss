@@ -1,0 +1,52 @@
+.footer {
+  background-color: salmon;
+}
+
+.footer__container {
+  @include wrapper;
+  background-color: $white;
+  text-align: center;
+  border-radius: 25px 25px 0 0;
+  margin-top: -20px;
+}
+
+.footer__logo {
+  width: 100px;
+  height: 19px;
+}
+
+.footer__socials {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.footer__copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid $light-blue;
+  padding: 20px 0 0 0;
+}
+
+.footer__copyright-text {
+  @include text($dark-grey);
+}
+
+.footer__copyright-logo {
+  width: 27px;
+  height: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__logo {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__logo {
+    width: 200px;
+    height: 52px;
+  }
+}

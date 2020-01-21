@@ -1,0 +1,54 @@
+.rates-list {
+  @include text($dark-grey);
+  @include list-style;
+}
+
+.rates-list__item {
+  padding: 15px 0;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  counter-increment: custom;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}
+
+.rates-list__item::before {
+  @include font-set(16px, 14px, regular, $white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(custom);
+  border-radius: 50%;
+  right: -40px;
+  top: 20px;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+}
+
+.rates-list__item:nth-child(3n + 1)::before {
+  background: $darkest-orange;
+}
+
+.rates-list__item:nth-child(3n + 2)::before {
+  background: $dark-orange;
+}
+
+.rates-list__item:nth-child(3n + 3)::before {
+  background: $orange;
+}
+
+.rates-list--popup .rates-list__item {
+  counter-increment: none;
+  width: 100%;
+}
+
+.rates-list--popup .rates-list__item::before {
+  content: none;
+}

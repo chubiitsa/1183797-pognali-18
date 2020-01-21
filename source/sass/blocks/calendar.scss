@@ -1,0 +1,29 @@
+.calendar {
+  border-collapse: collapse;
+}
+
+.calendar__month {
+  @include font-set(20px, 20px, bold, $dark-blue);
+  margin: 0;
+  display: block;
+}
+
+.calendar__button {
+  border: none;
+  background-color: transparent;
+}
+
+.calendar__week-day {
+  @include font-set(14px, 18px, regular, $dark-grey);
+
+  &--red {
+    color: red;
+  }
+}
+
+.calendar__date {
+  @include font-set(14px, 18px, regular, $dark-grey);
+  border: 1px solid $dark-grey;
+  opacity: 0.3;
+  text-align: center;
+}

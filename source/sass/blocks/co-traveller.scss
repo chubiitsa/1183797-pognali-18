@@ -1,0 +1,317 @@
+.co-traveller {
+  background-color: $white;
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: left;
+}
+
+.co-traveller--promo {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.co-traveller__info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.co-traveller__photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.co-traveller__name {
+  @include subtitle;
+  padding-left: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.co-traveller__status {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  order: 2;
+  margin-left: auto;
+
+  &--online {
+    background-color: green;
+  }
+
+  &--offline {
+    background-color: red;
+  }
+}
+
+.co-traveller__tags {
+  @include font-set(16px, 18px, regular, $dark-grey);
+  margin-top: 40px;
+}
+
+.co-traveller__block {
+  @include font-set(15px, 18px, regular, $dark-grey);
+  padding-bottom: 20px;
+}
+
+.co-traveller__transport-list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.co-traveller__transport-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-blue;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+}
+
+.co-traveller__transport-icon--inactive {
+  opacity: 0.15;
+}
+
+.co-traveller__level {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+.co-traveller__likes {
+  @include font-set(14px, 21px, bold, $darkest-blue);
+  text-transform: uppercase;
+  position: absolute;
+  top: 70px;
+  left: 120px;
+}
+
+.co-traveller__wish-list {
+  @include list-style;
+  @include font-set(15px, 18px, 500, $dark-blue);
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.co-traveller__wish-item {
+  padding-bottom: 5px;
+}
+
+.co-traveller__country {
+  margin-left: 10px;
+}
+
+.co-traveller__level-score {
+  @include font-set(24px, 18px, bold, $dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 3px solid $dark-orange;
+  margin: 20px 0 0 0;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.co-traveller__details {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.co-traveller__actions {
+  width: 100%;
+}
+
+.co-traveller__call-link {
+  background-color: $yellow;
+}
+
+.co-traveller--promo .co-traveller__photo {
+  display: block;
+  width: 270px;
+  height: 270px;
+  border-radius: 20px 20px 0 0;
+  position: static;
+  top: 0;
+  left: 0;
+}
+
+.co-traveller--promo .co-traveller__name {
+  padding-left: 0;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.co-traveller--promo .co-traveller__status {
+  order: -1;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.co-traveller--promo .co-traveller__tags {
+  margin-top: 0;
+}
+
+.co-traveller--promo .co-traveller__transport-item {
+  margin-right: 2px;
+  background-color: transparent;
+}
+
+.co-traveller--promo .co-traveller__block--level {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid $darkest-orange;
+}
+
+.co-traveller--promo .co-traveller__level-score {
+  @include font-set(24px, 24px, bold);
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.co-traveller--promo .co-traveller__level-text {
+  @include font-set(14px, 14px);
+  margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 16px;
+    width: 27px;
+    height: 1px;
+    background-color: $white;
+  }
+}
+
+.co-traveller--promo .co-traveller__wish-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.co-traveller--promo .co-traveller__flag {
+  margin-right: 10px;
+}
+
+.co-traveller--promo .co-traveller__country {
+  display: none;
+}
+
+.co-traveller--promo .co-traveller__level {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid $darkest-orange;
+}
+
+/*
+@media (min-width: $tablet-width) {
+  .co-traveller {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .co-traveller__photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px;
+    position: static;
+  }
+
+  .co-traveller__tags {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .co-traveller__likes {
+    position: static;
+  }
+
+  .co-traveller__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .co-traveller__call-link {
+    width: 50%;
+  }
+
+  .co-traveller__block--wishes {
+    order: 3;
+  }
+
+  .co-traveller__details {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .co-traveller__name {
+    width: 40%;
+  }
+
+  .co-traveller__tags {
+    width: 40%;
+  }
+
+  .co-traveller__transport-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .co-traveller__wish-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .co-traveller__wish-item {
+    margin-right: 10px;
+  }
+}
+ */

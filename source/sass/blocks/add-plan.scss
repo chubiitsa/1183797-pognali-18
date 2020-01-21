@@ -1,0 +1,107 @@
+.add-plan {
+  background-color: $blue;
+}
+
+.add-plan__container {
+  @include wrapper;
+  background-color: $medium-blue;
+  border-radius: 25px 25px 0 0;
+}
+
+.add-plan__title {
+  @include title($dark-blue);
+}
+
+.add-plan__legend {
+  @include font-set(20px, 20px, bold, $dark-blue);
+  margin: 10px 0;
+}
+
+.add-plan__fieldset {
+  border: none;
+  border-radius: 20px;
+  background-color: $white;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+}
+
+.add-plan__text {
+  @include text($dark-grey);
+}
+
+.add-plan__label {
+  @include font-set(16px, 16px, 500, $dark-blue);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-plan__label span {
+  opacity: 0.3;
+}
+
+.add-plan__label-kids {
+  @include font-set(15px, 15px, regular, $dark-grey);
+}
+
+.add-plan__link-next {
+  background-color: $yellow;
+}
+
+.add-plan__link-before {
+  background-color: transparent;
+}
+
+.add-plan__list {
+  @include list-style;
+}
+
+.add-plan__item {
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-plan__flag {
+  width: 35px;
+  height: 25px;
+}
+
+.add-plan__delete-country {
+  background-color: $light-blue;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.add-plan__label-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.add-plan__label-entertainment {
+  @include font-set(18px, 18px, 500, $dark-blue);
+}
+
+.add-plan__textarea {
+  @include font-set(16px, 22px, regular, $dark-grey);
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  width: 100%;
+  min-height: 220px;
+  padding: 10px 15px;
+  border: 1px solid $light-blue;
+  border-radius: 3px;
+  margin: 10px 0;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.add-plan__button {
+  background-color: $yellow;
+}

@@ -1,0 +1,46 @@
+.plans {
+  background-color: $light-blue;
+}
+
+.plans__container {
+  @include wrapper;
+  background-color: $blue;
+  border-radius: 25px 25px 0 0;
+}
+
+.plans__title {
+  @include title($dark-blue);
+}
+
+.plans__list {
+  @include list-style;
+}
+
+.plans__item {
+  background-color: $white;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.plans__country-name {
+  @include font-set(16px, 16px, bold, $dark-blue);
+  margin-top: 0;
+}
+
+.plans__count,
+.plans__date {
+  @include font-set(14px, 14px, 500, $dark-blue);
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.plans__button {
+  @include font-set(14px, 18px, 500, $dark-grey);
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  opacity: 0.3;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+}

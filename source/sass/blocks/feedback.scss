@@ -1,0 +1,13 @@
+.feedback {
+  padding: 10px 50px 20px 10px;
+}
+
+.feedback__text {
+  @include font-set(16px, 22px, 300);
+  margin: 0 0 20px 0;
+}
+
+.feedback__author {
+  @include font-set(16px, 22px, bold);
+  font-style: normal;
+}

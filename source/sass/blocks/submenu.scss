@@ -1,0 +1,39 @@
+.submenu {
+  text-align: center;
+}
+
+.submenu__link {
+  @include font-set(17px, 30px, bold, $darkest-blue);
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+
+  &--authorization {
+    background-color: $yellow;
+    border-radius: 20px;
+    padding: 8px 12px 2px;
+    margin: 20px 0;
+  }
+
+  &--phone,
+  &--mail {
+    padding: 7px 0 7px 60px;
+    text-align: left;
+  }
+}
+
+.submenu__link--phone::before,
+.submenu__link--mail::before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $darkest-blue;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  fill: $orange;
+}

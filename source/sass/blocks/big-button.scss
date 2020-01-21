@@ -1,0 +1,22 @@
+.big-button {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $darkest-blue;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .big-button {
+    height: 50px;
+    font-size: 20px;
+  }
+}

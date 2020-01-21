@@ -1,0 +1,96 @@
+.catalog-filter {
+  background-color: $light-blue;
+}
+
+.catalog-filter__container {
+  display: none;
+}
+
+.catalog-filter__container--opened {
+  @include wrapper;
+  @include border-radius;
+  display: block;
+  background-color: $blue;
+  padding-bottom: 20px;
+}
+
+.catalog-filter__header {
+  @include wrapper;
+  @include border-radius;
+  background-color: $blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-filter__title {
+  @include font-set(16px, 22px, bold, $dark-blue);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.catalog-filter__toggle {
+  background-color: transparent;
+  border: none;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: $dark-blue;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.catalog-filter__region-link {
+  @include font-set(16px, 22px, bold, $dark-blue);
+  text-transform: uppercase;
+  opacity: 0.3;
+  display: block;
+  padding: 3px;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.catalog-filter__regions-list {
+  @include list-style;
+  margin-bottom: 10px;
+}
+
+.catalog-filter__button {
+  background-color: #d6daed;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: $dark-blue;
+    position: absolute;
+    top: 19px;
+    left: 68px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
